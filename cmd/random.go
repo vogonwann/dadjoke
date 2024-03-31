@@ -1,5 +1,6 @@
 /*
-Copyright © 2024 NAME HERE <EMAIL ADDRESS>
+Copyright © 2024 Ivan Janjic wannjanjic@gmail.com
+Created using great tutorial from https://divrhino.com/articles/add-flags-to-command-line-tool-go-cobra/
 */
 package cmd
 
@@ -34,16 +35,6 @@ var randomCmd = &cobra.Command{
 func init() {
 	rootCmd.AddCommand(randomCmd)
 	rootCmd.PersistentFlags().String("term", "", "A search term for a dad joke")
-
-	// Here you will define your flags and configuration settings.
-
-	// Cobra supports Persistent Flags which will work for this command
-	// and all subcommands, e.g.:
-	// randomCmd.PersistentFlags().String("foo", "", "A help for foo")
-
-	// Cobra supports local flags which will only run when this command
-	// is called directly, e.g.:
-	// randomCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
 type Joke struct {
